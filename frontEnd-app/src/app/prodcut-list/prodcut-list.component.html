@@ -1,0 +1,17 @@
+<p></p>
+<div class=" container text-danger" *ngIf="errorMessage">
+  {{errorMessage}}
+</div>
+<table  *ngIf="prodcuts" class="table">
+  <tr>
+    <th>ID </th><th>Name </th><th>Price </th> <th>Quantity </th>
+  </tr>
+  <tr  *ngFor="let p of prodcuts._embedded.products">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+
+  </tr>
+
+</table>

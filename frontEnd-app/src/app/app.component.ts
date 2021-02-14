@@ -32,4 +32,13 @@ export class AppComponent implements OnInit{
   isAppManager() {
     return this.securityService.kc.hasRealmRole('app-manager');
   }
+  isProductManager() {
+    return this.securityService.kc.hasRealmRole('PRODUCT_MANAGER');
+  }
+  isConsumerManager() {
+    return this.securityService.kc.hasRealmRole('CUSTOMER_MANAGER');
+  }
+  isBillingManager() {
+    return this.securityService.kc.hasRealmRole('BILLING_MANAGER');
+  }
 }

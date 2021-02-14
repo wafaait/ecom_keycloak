@@ -8,6 +8,9 @@ import { SuppliersComponent } from './suppliers/suppliers.component';
 import {KeycloakSecurityService} from './services/keycloak-security.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RequestInterceptorService} from './services/request-interceptor.service';
+import { ProdcutListComponent } from './prodcut-list/prodcut-list.component';
+import { CustomersComponent } from './customers/customers.component';
+import { BillingComponent } from './billing/billing.component';
 
 /*
 export function kcFactoty(kcSecurity:KeycloakSecurityService) {
@@ -22,7 +25,10 @@ const SecService= new KeycloakSecurityService();
   declarations: [
     AppComponent,
     ProductsComponent,
-    SuppliersComponent
+    SuppliersComponent,
+    ProdcutListComponent,
+    CustomersComponent,
+    BillingComponent
   ],
   imports: [
     BrowserModule,

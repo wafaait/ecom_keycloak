@@ -1,0 +1,25 @@
+
+<p></p>
+<div class=" container text-danger" *ngIf="errorMessage">
+  {{errorMessage}}
+</div>
+<div> <h5>ID D'operation  : {{billings.id}}</h5></div>
+<div><h5>Date D'operation : {{billings.billingDate |  date:'MM/dd/yyyy'}}</h5> </div>
+<div></div>
+<div>Id Customer : {{billings.customerID}}</div>
+<div>Name  : {{billings.customer.name}}</div>
+<div>Email : {{billings.customer.email}}</div>
+<p></p>
+<h5>Prodcuts</h5>
+<table  *ngIf="billings" class="table">
+  <tr>
+    <th>ID </th> <th>Price</th><th>Qunatity </th>
+  </tr>
+  <tr  *ngFor="let p of billings.productItems">
+    <td>{{p.id}}</td>
+    <td>{{p.quantity}}</td>
+    <td>{{p.price}}</td>
+
+  </tr>
+</table>
+

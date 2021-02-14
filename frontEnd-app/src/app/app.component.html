@@ -1,14 +1,18 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Logo</a>
+  <a class="navbar-brand" href="#">Shop App</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
+
     <li class="nav-item">
-      <a class="nav-link" routerLink="/products">Products</a>
+      <a class="nav-link"  routerLink="/products">Products</a>
     </li>
-    <li class="nav-item" *ngIf="isAppManager()">
-      <a class="nav-link" routerLink="/suppliers">Suppliers</a>
+    <li class="nav-item">
+      <a class="nav-link"   *ngIf="isConsumerManager()" routerLink="/customers">Customers</a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link" *ngIf="isBillingManager()" routerLink="/billing">Billing</a>
     </li>
   </ul>
 
